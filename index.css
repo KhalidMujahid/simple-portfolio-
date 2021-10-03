@@ -1,0 +1,148 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;]
+	font-size: 16pt;
+}
+
+body{
+	height: 100vh;
+	background: linear-gradient(90deg,rgba(0, 0, 0, .9),rgba(0, 0, 0, .9));
+}
+
+#loader{
+	border: 12px solid #f3f3;
+	border-radius: 50%;
+	width: 150px;
+	border-top: 12px solid #000;
+	height: 150px;
+	animation: spin 2s linear infinite;
+}
+
+.vab{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+@keyframes spin{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+
+
+
+.container{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+.image img{
+	width: 300px;
+	background-color: orange;
+	padding: 3px;
+	border-radius: 100%;
+	height: 300px;
+	border:  5px solid #fff;
+	box-shadow: 0 0 5px #fff;
+}
+
+.main-text .name h1,.main-text .name p{
+	color: #fff;
+}
+
+.main-text .name h1{
+	font-size: 3rem;
+	text-shadow: 0 0 5px #000;
+	letter-spacing: 3px;
+	text-transform: capitalize;
+}
+
+.main-text .name p{
+	color: red;
+	text-shadow: 0 0 5px #000;
+	font-size: 1.5rem;
+	margin-bottom: 1.5rem;
+}
+
+a{
+	text-decoration: none;
+	border-radius: 20px;
+	padding: 0.9rem;
+	background-color: #fff;
+	color: #000;
+	border:  2px solid #fff;
+	border: none;
+	box-shadow: 0 0 5px #000;
+}
+
+a:hover{
+	background-color: green;
+	transition: 2s;
+	color: #fff;
+}
+
+.lg{
+	display: block;
+	width: 30%;
+}
+
+.sm{
+	display: none;
+}
+
+@media(max-width: 900px){
+	*{
+		font-size: 10pt;
+	}
+
+	.lg{
+		display: none;
+	}
+
+	.main-text .name p{
+		text-align: center;
+		margin-top: 1rem;
+	}
+
+	.main-text .name h1{
+		font-size: 2rem;
+	}
+
+	.sm{
+		display: block;
+		width: 70%;
+		margin-top: 2rem;
+		margin-bottom: 4rem;
+	}
+
+	.image img{
+		width: 200px;
+		height: 200px;
+	}
+
+	.container{
+		flex-direction: column;
+		height: 100vh;
+		margin: 1rem;
+	}
+	body{
+		height: 100vh;
+		padding: 2rem;
+	}
+}
